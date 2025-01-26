@@ -5,6 +5,7 @@ import "./globals.css";
 const gamjaFlower = Gamja_Flower({
   variable: "--font-gamja-flower",
   weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
