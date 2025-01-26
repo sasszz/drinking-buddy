@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar/Navbar";
 
 const gamjaFlower = Gamja_Flower({
   variable: "--font-gamja-flower",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gamjaFlower.variable} antialiased`}>{children}</body>
+      <body className={`${gamjaFlower.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
