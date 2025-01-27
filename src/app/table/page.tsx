@@ -2,14 +2,13 @@
 
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
-export default function Table() {
+function TableContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
   const name = searchParams.get("name");
-
   const [timestamp, setTimestamp] = useState("");
 
   useEffect(() => {
@@ -41,5 +40,13 @@ export default function Table() {
         Back
       </button>
     </div>
+  );
+}
+
+export default function Table() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TableContent />
+    </Suspense>
   );
 }
