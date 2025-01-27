@@ -1,13 +1,15 @@
 "use client";
 
-import { FormControlLabel, Switch } from "@mui/material";
 import { useState, useEffect } from "react";
+import { Switch } from "@base-ui-components/react/switch";
 
-export default function ThemeToggle() {
+import styles from "./ThemeToggle.module.scss";
+
+export const ThemeToggle = () => {
   const [theme, setTheme] = useState(
-    typeof window !== "undefined" && localStorage.getItem("theme") === "dark"
-      ? "dark"
-      : "light"
+    typeof window !== "undefined" && localStorage.getItem("theme") === "light"
+      ? "light"
+      : "dark"
   );
 
   useEffect(() => {
@@ -16,13 +18,12 @@ export default function ThemeToggle() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   return (
-    <FormControlLabel
-      control={<Switch defaultChecked onClick={toggleTheme} />}
-      label={theme === "light" ? "Light Mode" : "Dark Mode"}
-    />
+    <Switch.Root defaultChecked onClick={toggleTheme} className={styles.switch}>
+      <Switch.Thumb className={styles.thumb} />
+    </Switch.Root>
   );
-}
+};

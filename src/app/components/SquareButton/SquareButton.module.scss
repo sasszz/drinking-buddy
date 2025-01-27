@@ -1,0 +1,11 @@
+.background {
+  @apply h-[200px]
+    w-[200px]
+    bg-blue-600
+    rounded-3xl
+    hover:bg-blue-700
+    active:bg-blue-800
+    cursor-pointer
+    transition-colors
+    duration-200;
+}
