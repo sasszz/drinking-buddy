@@ -1,17 +1,17 @@
 "use client";
 
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { ThemeToggle } from "../ThemeToggle";
 import Link from "next/link";
 
-export default function Navbar() {
+export const Navbar = () => {
   return (
-    <div className="flex flex-row justify-between">
-      <div className="flex flex-col">
-        <Link href={`/`}>Drinking Buddy</Link>
+    <div className="flex flex-row justify-between p-10">
+      <div className="flex flex-row gap-12 items-center">
+        <Link className="text-3xl" href={`/`}>Drinking Buddy</Link>
         <Link href={`/about`}>About</Link>
         <Link href={`/onboard`}>Onboard</Link>
       </div>
       <ThemeToggle />
     </div>
   );
-}
+};

@@ -1,0 +1,35 @@
+.switch {
+  @apply relative
+    flex 
+    appearance-none
+    border-0
+    m-0
+    p-[1px]
+    w-16
+    h-12
+    rounded-full
+    outline
+    outline-1
+    outline-offset-[-1px]
+    bg-slate-800
+    duration-[125ms];
+
+  &:active {
+    @apply bg-slate-500;
+  }
+
+  &[data-checked]:active {
+    @apply bg-slate-800;
+  }
+}
+
+.thumb {
+  @apply aspect-[1/1]
+    h-full
+    rounded-full
+    bg-white
+    transition-transform
+    duration-150
+    ease-in-out
+    data-[checked]:translate-x-4;
+}

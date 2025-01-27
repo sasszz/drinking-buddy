@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "@/app/components";
 
 const gamjaFlower = Gamja_Flower({
   variable: "--font-gamja-flower",
