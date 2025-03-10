@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ChildishKid";
+  src: url("/fonts/ChildishKid.ttf");
+}
+
 :root {
   --background-light: #ffffff;
   --foreground-light: #171717;
@@ -20,5 +25,4 @@
 body {
   color: var(--foreground);
   background-color: var(--background);
-  font-family: var(--font-gamja-flower), Arial, Helvetica, sans-serif;
 }

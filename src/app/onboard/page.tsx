@@ -1,4 +1,4 @@
-import { TextInput } from "@/app/components";
+import { TextInput } from "../../components";
 
 export default function Onboard() {
   return (
