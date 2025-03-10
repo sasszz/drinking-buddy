@@ -1,6 +1,6 @@
 "use client";
 
-import { SquareButton } from "@/app/components";
+import { SquareButton } from "../../../components";
 import { useRouter } from "next/navigation";
 
 import Link from "next/link";
