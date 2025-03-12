@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Cup from "../../public/cup-buddy.png";
+import { Button } from "@/components";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         </h1>
         <p className="font-[1000]">The friend that keeps count</p>
         <Image src={Cup} alt={"Cup Buddy"} />
+        <Button buttonText={"Continue"} />
       </main>
     </div>
   );

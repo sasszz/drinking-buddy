@@ -1,0 +1,29 @@
+.main {
+  @apply relative
+    px-8
+    py-2
+    font-bold
+    rounded-full
+    border-4
+    border-black;
+}
+
+.pressed {
+  @apply shadow-none
+    translate-x-2
+    translate-y-2;
+}
+
+.beforePressed {
+  @apply shadow-[4px_4px_0px_black];
+}
+
+.disabled {
+  @apply opacity-50
+    cursor-not-allowed;
+}
+
+.destructive {
+  @apply bg-red-500
+    text-white;
+}
