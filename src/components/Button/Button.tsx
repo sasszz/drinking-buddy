@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
@@ -20,36 +21,25 @@ export const Button = ({
   destructive,
   onClick,
 }: ButtonProps) => {
-  const [isPressed, setIsPressed] = useState(false);
-
-  const handlePress = () => setIsPressed(true);
-  const handleRelease = () => setIsPressed(false);
-
   return (
     <div className="relative inline-block">
       {/* Offset Shadow */}
       <div className="absolute -bottom-[10px] -right-[10px] bg-black w-full h-full rounded-full"></div>
+
       {/* Main Button */}
-      <button
-       className={`${styles.main} ${
-        isPressed ? styles.pressed : styles.beforePressed
-      } 
-      ${disabled ? styles.disabled : ""} ${
-        destructive ? styles.destructive : ""
-      }`}
+      <motion.button
+        className={`${styles.main} ${disabled ? styles.disabled : ""} ${
+          destructive ? styles.destructive : ""
+        }`}
         disabled={disabled}
-        type={type ? type : "button"}
+        type={type || "button"}
         onClick={onClick}
-        onMouseDown={handlePress}
-        onMouseUp={handleRelease}
-        onMouseLeave={handleRelease}
-        onTouchStart={handlePress}
-        onTouchEnd={handleRelease}
+        whileTap={{ x: 5, y: 5 }} // Moves the button down-right when pressed
       >
         {/* Inside Fill */}
         <span className="absolute inset-0 rounded-full bg-white opacity-85"></span>
-        <span className="relative z-10">{buttonText}</span>{" "}
-      </button>
+        <span className="relative z-10">{buttonText}</span>
+      </motion.button>
     </div>
   );
 };
