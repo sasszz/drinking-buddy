@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Gamja_Flower } from "next/font/google";
+// import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
 
-const gamjaFlower = Gamja_Flower({
-  variable: "--font-gamja-flower",
-  weight: "400",
-  subsets: ["latin"],
-});
+// const gamjaFlower = Gamja_Flower({
+//   variable: "--font-gamja-flower",
+//   weight: "400",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Drinking Buddy",
@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gamjaFlower.variable} antialiased`}>
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
