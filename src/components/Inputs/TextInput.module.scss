@@ -1,0 +1,14 @@
+.input {
+  @apply px-8
+    py-2
+    font-bold
+    rounded-full
+    border-4
+    border-black;
+
+  &:focus {
+    @apply outline-blue-500
+      outline-offset-[-1px];
+  }
+}
+
