@@ -14,7 +14,7 @@ export default function Learn() {
           </ul>
         </div>
       </FadeIn>
-      <Link href="/onboard/4-complete">
+      <Link href="/onboard/4-sign-up">
         <Button buttonText="Next" />
       </Link>
     </div>

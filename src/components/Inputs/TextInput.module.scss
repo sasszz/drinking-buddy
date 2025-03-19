@@ -1,0 +1,18 @@
+.input {
+  @apply flex
+    items-start
+    justify-start
+    text-start
+    px-8
+    py-2
+    font-bold
+    rounded-full
+    border-4
+    bg-white
+    border-black;
+
+  &:focus {
+    @apply outline-blue-500
+      outline-offset-[-1px];
+  }
+}
