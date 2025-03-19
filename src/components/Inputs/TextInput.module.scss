@@ -1,9 +1,14 @@
 .input {
-  @apply px-8
+  @apply flex
+    items-start
+    justify-start
+    text-start
+    px-8
     py-2
     font-bold
     rounded-full
     border-4
+    bg-white
     border-black;
 
   &:focus {
@@ -11,4 +16,3 @@
       outline-offset-[-1px];
   }
 }
-
